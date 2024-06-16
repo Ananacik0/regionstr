@@ -46,7 +46,6 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #fff;
-    position: relative;
 }
 
 header {
@@ -153,30 +152,90 @@ header > .container {
 .specialization {
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    
 }
 
-.specialization > h2 {
-    margin-bottom: 20px;
+.specialization_title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 120px;
 }
 
-.specialization > p {
-    margin-bottom: 80px;
-}
-
-.specialization > h2 > span {
+.specialization_title > h2 > span {
     font-size: 40px;
+    font-weight: 600;
+    color: #E84212;
+    text-transform: uppercase;
+}
+
+.specialization_block--slider {
+    position: relative;
+    height: 100%;
+    max-width: 40%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: -10px -10px 0px 0px #000;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.specialization__block {
+    display: flex;
+    column-gap: 140px;
+    align-items: center;
+}
+
+.specialization__block--info > h3 > span {
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     color: #E84212;
 }
 
-.specialization__block {
+.specialization__block--info {
     display: flex;
-    position: relative;
-}
+    flex-direction: column;
+    row-gap: 40px;
+    text-align: left;
 
-.
+    p {
+        line-height: 180%;
+    }
+
+    a {
+        background-color: #E84212;
+        padding: 16px 62px;
+        max-width: 240px;
+        text-align: center;
+        box-shadow: 5px 7px 0px 0px #000;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
 
 
 
@@ -184,8 +243,144 @@ header > .container {
 /** ______specialization--END______ **/
 
 
+/** ______choice______ **/
+
+.choice {
+    position: relative;
+    margin-bottom: 800px;
+    align-items: center;
+    
+
+    .choice__description {
+        text-align: center;
+        background: url(images/fon.png);
+        padding: 50px 30px;
+        border: 0;
+        border-radius: 10px;
+
+        p {
+            color: #fff;
+            line-height: 180%;
+            font-size: 20px;
+        }
+    }
+    
+    .choice__description--block {
+        background: #fff;
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 70px;
+        text-align: left;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 10px 10px 0px 0px #000;
+
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        h2 > span {
+            font-size: 40px;
+            font-weight: 600;
+            color: #E84212;
+            text-transform: uppercase;
+        }
+
+        .choice__description--block--list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 875px;
+            row-gap: 50px;
+            justify-content: space-between;
+            
+            .choice__description--block--item {
+                max-width: 400px;
+                display: flex;
+                column-gap: 10px;
+                align-items: start;
+
+                .choice__description--block--item--desc {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+            }
+
+        }
+    }
+}
 
 
+/** ______choice-end______ **/
+
+/** ______projects______ **/
+
+.projects {
+
+    margin-bottom: 150px;
+
+    h2 {
+        margin-bottom: 100px;
+    }
+
+    h2 > span {
+        font-size: 40px;
+        font-weight: 600;
+        color: #E84212;
+        text-transform: uppercase;
+    }
+
+    .projects__image {
+        display: flex;
+        flex-wrap: wrap;
+    
+        img {
+            max-width: 50%;
+        }
+    }
+}
+
+
+
+/** ______projects-end______ **/
+
+
+/** ______partners______ **/
+
+.partners {
+    
+    margin-bottom: 150px;
+
+    h2 {
+        margin-bottom: 50px;
+
+        span {
+            font-size: 40px;
+            font-weight: 600;
+            color: #E84212;
+            text-transform: uppercase;
+        }
+
+    }
+
+    .partners__logo {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+}
+
+/** ______partners-end______ **/
 
 
 
@@ -314,3 +509,120 @@ footer > .container {
 }
 
 /** ______FOOTER--END______ **/
+
+@media screen and (max-width: 1280px) {
+    
+    .container {
+        max-width: 1000px;
+    }
+
+    .cover {
+        
+        img {
+            width: 700px;
+        }
+
+        .cover__block {
+
+            h1 {
+                font-size: 33px;
+            
+                span {
+                    font-size: 40px;
+                }
+            }
+
+        }
+
+    }
+
+    .choice__description--block {
+        padding: 30px !important;
+    }
+
+    .partners {
+
+        .partners__logo {
+            flex-wrap: wrap;
+            row-gap: 40px;
+        }
+
+    }
+
+    .footer__navigation {
+        column-gap: 60px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 700px;
+    }
+
+    header {
+        .container {
+            flex-direction: column;
+            row-gap: 40px;
+            padding-bottom: 40px;
+        
+            .header__contact--nomber {
+                text-align: center;
+            }
+        }
+    }
+
+    .cover {
+        img {
+            width: 400px;
+        }
+    }
+
+    .specialization__block {
+        flex-direction: column;
+        
+        .specialization__block--info {
+            margin-bottom: 100px;
+        }
+    
+    }
+
+    .specialization_block--slider {
+        max-width: 100%;
+    }
+
+
+    .choice {
+        margin-bottom: 150px;
+    }
+
+    .choice__description--block {
+        position: relative !important;
+        box-shadow: none !important;
+    }
+
+    .choice__description--block--list {
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px !important;
+        margin: 0 auto;
+        
+    }
+
+    footer {
+
+        .container {
+            flex-direction: column;
+            row-gap: 50px;
+
+            .footer__contact--phone--number {
+                text-align: center;
+            }
+
+            .footer__navigation {
+                text-align: center;
+            }
+        }
+    }
+
+}
